@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fafafa;
+  padding: 20px;
+}
+
+header {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+header img.logo {
+  height: 80px;
+  width: auto;
+}
+
+header h1 {
+  margin: 10px 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.banner {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.busqueda {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px 15px;
+}
+
+.busqueda input {
+  flex: 1;
+  border: none;
+  font-size: 1em;
+  outline: none;
+  padding-left: 10px;
+}
+
+.busqueda img {
+  width: 24px;
+  height: 24px;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.producto {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: scale(1.01);
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  display: none;
+}
+
+.slider img.active {
+  display: block;
+}
+
+.slider .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+}
+
+.slider .prev {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.slider .next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.producto-info {
+  padding: 15px;
+}
+
+.producto-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.nombre-producto {
+  color: #222;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.precio-producto {
+  color: #25D366;
+  font-size: 1.1em;
+}
+
+.producto-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.stock {
+  color: #888;
+  font-size: 0.9em;
+}
+
+/* NUEVO: estilo para productos agotados */
+.producto.agotado .precio-producto {
+  color: #d00;
+  text-decoration: line-through;
+}
+
+.producto.agotado .stock {
+  color: #d00;
+  font-weight: bold;
+}
+
+.precio-producto.agotado {
+  color: #b00020;
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+.whatsapp-btn {
+  display: block;
+  margin-top: 15px;
+  background-color: #25D366;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe57;
+}
+
+.footer {
+  text-align: center;
+  color: #777;
+  font-size: 0.9em;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  .catalogo {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.redes-sociales {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.redes-sociales a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.redes-sociales a.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.redes-sociales a.instagram {
+  background-color: #e1306c;
+  color: white;
+}
+
+.redes-sociales a.whatsapp {
+  background-color: #25D366;
+  color: white;
+}
+
+.redes-sociales a:hover {
+  opacity: 0.9;
+}
+
+.redes-sociales a i {
+  margin-right: 6px;
+}
