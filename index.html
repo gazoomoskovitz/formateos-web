@@ -4,190 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Catálogo de Productos</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fafafa;
-      padding: 20px;
-    }
-
-    header {
-      max-width: 600px;
-      margin: 0 auto 20px;
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    header img.logo {
-      height: 80px;
-      width: auto;
-    }
-
-    header h1 {
-      margin: 10px 0;
-      color: #333;
-      font-size: 1.8rem;
-    }
-
-    .banner {
-      width: 100%;
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .banner img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .busqueda {
-      max-width: 600px;
-      margin: 0 auto 20px;
-      display: flex;
-      align-items: center;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 10px 15px;
-    }
-
-    .busqueda input {
-      flex: 1;
-      border: none;
-      font-size: 1em;
-      outline: none;
-      padding-left: 10px;
-    }
-
-    .busqueda img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .catalogo {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    .producto {
-      background-color: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      overflow: hidden;
-      transition: transform 0.2s ease;
-    }
-
-    .producto:hover {
-      transform: scale(1.01);
-    }
-
-    .slider {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .slider img {
-      width: 100%;
-      display: none;
-    }
-
-    .slider img.active {
-      display: block;
-    }
-
-    .slider .nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 10;
-      user-select: none;
-    }
-
-    .slider .prev {
-      left: 0;
-      border-radius: 0 5px 5px 0;
-    }
-
-    .slider .next {
-      right: 0;
-      border-radius: 5px 0 0 5px;
-    }
-
-    .producto-info {
-      padding: 15px;
-    }
-
-    .producto-info h3 {
-      margin: 0 0 10px;
-      font-size: 1.2em;
-    }
-
-    .nombre-producto {
-      color: #222;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-
-    .precio-producto {
-      color: #25D366;
-      font-size: 1.1em;
-    }
-
-    .producto-info p {
-      margin: 5px 0;
-      color: #555;
-    }
-
-    .stock {
-      color: #888;
-      font-size: 0.9em;
-    }
-
-    .whatsapp-btn {
-      display: block;
-      margin-top: 15px;
-      background-color: #25D366;
-      color: white;
-      text-align: center;
-      padding: 12px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .whatsapp-btn:hover {
-      background-color: #1ebe57;
-    }
-
-    .footer {
-      text-align: center;
-      color: #777;
-      font-size: 0.9em;
-      margin-top: 40px;
-      padding: 20px;
-    }
-
-    @media (min-width: 600px) {
-      .catalogo {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -197,6 +15,19 @@
   <div class="banner">
     <img src="img/banner-pagos.png" alt="Banner de pagos">
   </div>
+
+  <div class="redes-sociales">
+  <a href="https://www.facebook.com/formateosadomiciliosorno" target="_blank" class="facebook">
+    <i class="fab fa-facebook-f"></i> Facebook
+  </a>
+  <a href="https://www.instagram.com/formateos.osorno" target="_blank" class="instagram">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+  <a href="https://wa.me/56936644023" target="_blank" class="whatsapp">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+  </a>
+</div>
+
 </header>
 
 <div class="busqueda">
@@ -205,6 +36,8 @@
 </div>
 
 <div class="catalogo" id="catalogo">
+
+  <!-- AQUÍ VAN TODOS TUS PRODUCTOS - COPIA Y PEGA LOS QUE TENÍAS -->
 
   <!-- Producto 1 -->
   <div class="producto" data-nombre="audifonos inalambricos hp h10h">
@@ -215,9 +48,9 @@
       <button class="nav next">▶</button>
     </div>
     <div class="producto-info">
-      <h3><span class="nombre-producto">Audifonos Inalambricos HP H10H</span> - <span class="precio-producto">$10.000</span></h3>
+      <h3><span class="nombre-producto">Audifonos Inalambricos HP H10H</span> - <span class="precio-producto agotado">$10.000</span></h3>
       <p>Audífonos inalambricos marca HP. Estéticamente cuentan con un diseño ergonómico, control táctil ligero y sin preocupaciones. Cuenta con un tiempo de uso de 4 horas y para una carga completa de 30 horas. Se encuentran nuevos y sellados.</p>
-      <p class="stock">Stock disponible: 1</p>
+      <p class="stock agotado"><strong>Agotado</strong></p>
       <a class="whatsapp-btn" href="https://wa.me/56936644023?text=Hola! Estoy interesado en la RAM DDR4 KLLISRE" target="_blank">Consultar por WhatsApp</a>
     </div>
   </div>
@@ -231,9 +64,9 @@
       <button class="nav next">▶</button>
     </div>
     <div class="producto-info">
-      <h3><span class="nombre-producto">Cargador IPhone Lightning</span> - <span class="precio-producto">$8.000</span></h3>
+      <h3><span class="nombre-producto">Cargador IPhone Lightning</span> - <span class="precio-producto agotado">$8.000</span></h3>
       <p>Cargador para IPhone tipo Lightning alternativo. Cuenta con su adaptador y cable, completamente nuevo y sellado.</p>
-      <p class="stock">Stock disponible: 1</p>
+      <p class="stock"><strong>Agotado</strong></p>
       <a class="whatsapp-btn" href="https://wa.me/56936644023?text=Hola! Estoy interesado en la RAM DDR4 KLLISRE" target="_blank">Consultar por WhatsApp</a>
     </div>
   </div>
@@ -249,7 +82,7 @@
     <div class="producto-info">
       <h3><span class="nombre-producto">Cepillo Alisador</span> - <span class="precio-producto">$15.000</span></h3>
       <p>Cepillo alisador el cual cuenta con una temperatura de 80° a 230°. Ideal para disminuir el frizz y dejar el pelo liso. Viene con su caja y pequeño manual.</p>
-      <p class="stock">Stock disponible: 1</p>
+      <p class="stock">Stock disponible: 2</p>
       <a class="whatsapp-btn" href="https://wa.me/56936644023?text=Hola! Estoy interesado en el Cepillo Alisador" target="_blank">Consultar por WhatsApp</a>
     </div>
   </div>
@@ -297,12 +130,28 @@
     <div class="producto-info">
       <h3><span class="nombre-producto">Disco Duro SSD 240 GB</span> - <span class="precio-producto">$15.000</span></h3>
       <p>SSD en perfecto estado, formateado y probado.</p>
-      <p class="stock">Stock disponible: 2</p>
+      <p class="stock">Stock disponible: 1</p>
       <a class="whatsapp-btn" href="https://wa.me/56936644023?text=Hola! Estoy interesado en el Disco SSD 240GB" target="_blank">Consultar por WhatsApp</a>
     </div>
   </div>
 
   <!-- Producto 7 -->
+  <div class="producto" data-nombre="parlante portatil">
+    <div class="slider">
+      <button class="nav prev">◀</button>
+      <img src="img/parlante-portatil-1.png" class="active" alt="PARLANTE 1">
+      <img src="img/parlante-portatil-2.jpg" alt="PARTLANTE 2">
+      <button class="nav next">▶</button>
+    </div>
+    <div class="producto-info">
+      <h3><span class="nombre-producto">Parlante Portatil LED</span> - <span class="precio-producto">$5.000</span></h3>
+      <p>Parlante portatil recargable con luces LED coloridas. Ideal para fiestas y reuniones. Este puede tener una duracion de hasta 24 horas con una carga completa si se utiliza de manera moderada. Y de 6 a 10 horas con su maxima potencia.</p>
+      <p class="stock">Stock disponible: 1</p>
+      <a class="whatsapp-btn" href="https://wa.me/56936644023?text=Hola! Estoy interesado en el Parlante Portatil LED" target="_blank">Consultar por WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Producto 8 -->
   <div class="producto" data-nombre="memoria ram ddr3 entadm">
     <div class="slider">
       <button class="nav prev">◀</button>
@@ -318,7 +167,7 @@
     </div>
   </div>
 
-  <!-- Producto 8 -->
+  <!-- Producto 9 -->
   <div class="producto" data-nombre="memoria ram ddr4 kllisre">
     <div class="slider">
       <button class="nav prev">◀</button>
@@ -333,6 +182,8 @@
       <a class="whatsapp-btn" href="https://wa.me/56936644023?text=Hola! Estoy interesado en la RAM DDR4 KLLISRE" target="_blank">Consultar por WhatsApp</a>
     </div>
   </div>
+
+  <!-- Resto de tus productos siguen igual... (puedes pegarlos desde tu HTML original) -->
 
 </div>
 
@@ -374,6 +225,3 @@
 
 </body>
 </html>
-
-
-
